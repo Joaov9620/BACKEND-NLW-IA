@@ -8,8 +8,8 @@ import { generateAICompletionRoute } from './routes/generate-ai-completion'
 const app = fastify()
 
 //qualquer frontend pode acessar a api
-app.register(fastifyCors,{
-  origin:'*',
+app.register(fastifyCors, {
+  origin: '*',
 })
 
 app.register(getAllPromptsRoute)
@@ -20,5 +20,5 @@ app.register(generateAICompletionRoute)
 app.listen({
   port: 3333,
 }).then(() => {
-  console.log('HTTP Server Running...') 
+  console.log('HTTP Server Running...')
 })
